@@ -7,57 +7,23 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <!-- CSS for styling hash links -->
-  <style>
-    /* Target the hash links */
-    a[data-id^="#"] {
-      background-color: blue; /* Set the background color */
-      color: white; /* Set the text color */
-      padding: 2px 6px; /* Adjust padding for better spacing */
-      border-radius: 4px; /* Add some border radius for rounded corners */
-      text-decoration: none; /* Remove default underline */
-    }
-
-    /* Target the hash links when hovered */
-    a[data-id^="#"]:hover {
-      background-color: darkblue; /* Change background color on hover */
-    }
-  </style>
 </head>
 <body>
-  <!-- Search Bar -->
-  <div id="search-bar">
-    <input type="text" id="search-input" placeholder="Search...">
-    <button onclick="search()">Search</button>
-  </div>
-
   <div id="app"></div>
-
-  <!-- Docsify search plugin script -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-  <!-- JavaScript for Search Functionality -->
-  <script>
-    function search() {
-      // Get the search query from the input field
-      var query = document.getElementById("search-input").value;
-
-      // Trigger Docsify search
-      window.Docsify.search(query);
-    }
-  </script>
   <script>
     window.$docsify = {
-      name: 'Digital Signing Service',
-      repo: 'https://github.com/sherrykisilu/dssmarkdown',
-      // Configure search plugin
+      name: '',
+      repo: '',
       search: {
-        maxAge: 86400000, // Expiration time for search data in milliseconds (1 day)
-        paths: 'auto', // Auto generate paths for searching all documents
-        placeholder: 'Search' // Placeholder text for the search input
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: ['README.md'],
+        placeholder: 'Type to search'
       }
-    };
+    }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Docsify Search Plugin -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
